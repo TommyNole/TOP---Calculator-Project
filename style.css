@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    margin-top: 2rem;
+    background: url(images/math-bg.jpg) no-repeat center center/cover;
+    min-height: 100vh; 
+    /* create heavy drop shadow */
+}
+
+.calculator {
+    border: 15px solid #2D3033;
+    border-radius: 25px;
+    width: 600px;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    padding: 3rem;
+    background-color: #4b4f54;
+    box-shadow: 15px 10px 20px black;
+}
+
+.display {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #00ff00;
+    border: 8px solid #2D3033;
+    border-radius: 10px;
+    font-size: 2rem;
+    text-align: right;
+    padding: 0 1rem;
+    margin: 1rem;   
+    justify-content: center;
+    box-shadow: inset 0 0 10px #000000;
+    font-family: 'Orbitron', sans-serif;
+    color: #2D3033;
+}
+
+.display .display-result {
+    font-size: 3rem;
+    margin-top: 3.75rem;
+}
+
+.buttons {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 1rem;
+}
+    
+.buttons-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+}
+
+.buttons-row:nth-child(1) {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.buttons-row-button {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    color: white;
+    width: 100%;
+    height: 75px;
+    border: 5px solid transparent;
+    border-radius: 50px;
+    background-color: black;
+    font-size: 2rem;
+    cursor: pointer;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .9);
+    border-color: #2D3033;
+}
+
+.buttons-row-button:hover {
+    background-color: darkgray;
+    color: black;
+}
+
+.buttons-row-button:active {
+    background-color: darkgray;
+    color: black;
+    border: 5px solid black;
+    transform: scale(.95);
+}
+
+/* select the equals button */
+.buttons-row:nth-child(5) .buttons-row-button:nth-child(3) {
+    background-color: darkblue;
+    color: white;
+    border-color: #2D3033;
+}
+
+.buttons-row-button:nth-child(4){
+    background-color: darkblue;
+    border-color: #2D3033;
+}
+
+.buttons-row:nth-child(1) .buttons-row-button:nth-child(1) {
+    background-color: darkblue;
+    border-color: #2D3033;
+}
+
+
