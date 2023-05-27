@@ -139,3 +139,6 @@ function convertToMathSymbols() {
   resultDisplay.textContent = operation;
   calculate();
 }
+
+// To Do
+// Fix limitation of 10 digits
