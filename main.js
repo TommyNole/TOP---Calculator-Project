@@ -54,6 +54,11 @@ function handleKeyboardInput(e) {
 function calculate() {
   let result = 0;
   let operation = resultDisplay.textContent;
+  if (operation.length > 10) {
+    alert("This calculator can only handle 10 digits at a time!");
+    clear();
+    return;
+  }
   let numbers = operation.split(/[-+*/]/);
   let operators = operation
     .split(/[0-9.]/)
