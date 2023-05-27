@@ -17,10 +17,8 @@ numberButtons.forEach((button) => {
   button.addEventListener("click", () => {
     if (resultDisplay.textContent === "0") {
       resultDisplay.textContent = button.textContent;
-      console.log(resultDisplay.textContent);
     } else {
       resultDisplay.textContent += button.textContent;
-      console.log(resultDisplay.textContent);
     }
   });
 });
@@ -72,6 +70,9 @@ function calculate() {
       }
     }
   }
+
+  if (result === undefined || result === null) return clear();
+
   historyDisplay.textContent = operation;
   resultDisplay.textContent = result;
 }
